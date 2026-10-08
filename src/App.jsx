@@ -1,4 +1,3 @@
-
 import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
 import Menu from "./pages/menú/Menu";
 

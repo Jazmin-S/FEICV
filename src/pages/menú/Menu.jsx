@@ -1,4 +1,4 @@
-
+import Catalogo from "../catalogo/Catalogo";
 import Perfil from "../perfilacademico/Perfil";
 import { useState } from "react";
 import {
@@ -350,18 +350,20 @@ export default function Menu() {
                 <GraficoDiagnosticos />
               </section>
             </>
-          ) : opcionActiva === "perfil" ? (
+                    ) : opcionActiva === "perfil" ? (
             <Perfil />
+          ) : opcionActiva === "catalogo" ? (
+            <Catalogo />
           ) : (
             <section className="menu-vista-secundaria">
-                <GraduationCap size={42} />
-                <h1>
-                  {opcionesMenu.find(
-                    (opcion) => opcion.id === opcionActiva
-                  )?.nombre}
-                </h1>
-                <p>Seleccionaste esta sección del sistema.</p>
-              </section>
+              <GraduationCap size={42} />
+              <h1>
+                {opcionesMenu.find(
+                  (opcion) => opcion.id === opcionActiva
+                )?.nombre}
+              </h1>
+              <p>Seleccionaste esta sección del sistema.</p>
+            </section>
           )}
         </main>
       </div>
