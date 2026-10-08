@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: #1f2c1c;
+}
+
+.login-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #200657;
+  padding: 24px;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 980px;
+  min-height: 560px;
+  background: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+  display: flex;
+  overflow: hidden;
+}
+
+/* --- PANEL IZQUIERDO --- */
+.login-form-pane {
+  width: 38%;
+  padding: 40px 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #ffffff;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-logo {
+  position: relative;
+  width: 26px;
+  height: 26px;
+}
+
+.brand-logo .square {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 5px;
+}
+
+.brand-logo .s1 {
+  background: lab(28.63% -29.48 17.6);
+  top: 0;
+  left: 0;
+}
+
+.brand-logo .s2 {
+  background: #4162a8;
+  bottom: 0;
+  right: 0;
+  opacity: 0.8;
+}
+
+.brand-name {
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: #1d3367;
+  letter-spacing: -0.5px;
+}
+
+.avatar-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 25px;
+}
+
+.avatar-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 2px solid #1d3367;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1d3367;
+}
+
+.login-form-pane form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.field-icon {
+  position: absolute;
+  left: 16px;
+  color: #1d3367;
+  pointer-events: none;
+}
+
+.login-form-pane input[type="email"],
+.login-form-pane input[type="password"] {
+  width: 100%;
+  padding: 12px 16px 12px 46px;
+  border: 2px solid #1d3367;
+  border-radius: 50px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #1d3367;
+  outline: none;
+  background: transparent;
+  transition: all 0.2s ease;
+}
+
+.login-form-pane input::placeholder {
+  color: #8391a8;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.login-form-pane input:focus {
+  box-shadow: 0 0 0 3px rgba(29, 51, 103, 0.15);
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 13px;
+  background: #115028;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin-top: 4px;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.btn-submit:hover {
+  background: #14244b;
+}
+
+.btn-submit:active {
+  transform: scale(0.99);
+}
+
+.form-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.72rem;
+  margin-top: 6px;
+  color: #1d3367;
+  font-weight: 600;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.forgot-link {
+  color: #1d3367;
+  text-decoration: none;
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #d0d7e5;
+}
+
+.dot.active {
+  background: #1d3367;
+}
+
+/* --- PANEL DERECHO  --- */
+.login-art-pane {
+  width: 62%;
+/* Fondo azul profundo con iluminación ambiental */
+background:
+  /* Luz verde desde la izquierda */
+  radial-gradient(
+    ellipse at 0% 34%,
+    rgba(12, 143, 47, 0.9) 0%,
+    rgba(7, 147, 75, 0.62) 21%,
+    transparent 55%
+  ),
+
+  /* Luz verde desde la derecha */
+  radial-gradient(
+    ellipse at 98% 67%,
+    rgba(7, 96, 52, 0.92) 0%,
+    rgba(17, 118, 41, 0.62) 21%,
+    transparent 49%
+  ),
+
+  /* Transición verde-azulada central */
+  radial-gradient(
+    ellipse at 49% 53%,
+    rgba(20, 107, 59, 0.58) 0%,
+    transparent 67%
+  ),
+
+  /* Fondo azul eléctrico */
+  linear-gradient(
+    180deg,
+    #08147f 0%,
+    #183267 32%,
+    #1c4108 57%,
+    #050a68 100%
+  );
+  padding: 48px;
+  display: flex;
+  align-items: center;      
+  justify-content: center;   
+  font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+  color: #ffffff;
+  position: relative;
+}
+
+.art-content {
+  width: 100%;
+  max-width: 480px;
+  text-align: right;          
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 18px;
+}
+
+/* Título 'Bienvenido.' */
+.art-content h1 {
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.1;
+  letter-spacing: -1.2px;
+  margin: 0;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Texto descriptivo */
+.art-content p {
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.92); 
+  font-weight: 400;
+  margin: 0;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Pregunta de registro */
+.signup-prompt {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.signup-prompt a {
+  color: #f6f7f6;          
+  font-weight: 700;
+  text-decoration: none;
+  margin-left: 4px;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+.signup-prompt a:hover {
+  color: #96edff;
+  text-decoration: underline;
+}

@@ -1,0 +1,300 @@
+
+/* ===== CONTENEDOR DEL PERFIL ===== */
+
+.perfil-contenedor {
+  width: 100%;
+  min-width: 0;
+  color: #172238;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ===== ENCABEZADO ===== */
+
+.perfil-encabezado {
+  margin-bottom: 10px;
+}
+
+.perfil-encabezado h1 {
+  margin: 0 0 5px;
+  font-size: 27px;
+  font-weight: 750;
+  color: #111a30;
+  letter-spacing: -0.6px;
+}
+
+.perfil-encabezado p {
+  margin: 0;
+  font-size: 13px;
+  color: #526780;
+  line-height: 1.5;
+}
+
+/* ===== FORMULARIO ===== */
+
+.perfil-formulario {
+  width: 100%;
+  padding: 28px;
+  background: #166e25;
+  border: 1px solid #f8f9f9;
+  border-radius: 12px;
+}
+
+.perfil-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.perfil-campo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.perfil-campo label {
+  font-size: 14px;
+  font-weight: 700;
+  color: #f5f7f9;
+}
+
+.perfil-campo input,
+.perfil-campo select,
+.perfil-campo textarea {
+  width: 100%;
+  min-height: 38px;
+  padding: 10px 13px;
+  border: 1px solid #ffffff;
+  border-radius: 7px;
+  outline: none;
+  background: #fefeff;
+  color: #1f2d40;
+  font-family: inherit;
+  font-size: 13px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.perfil-campo textarea {
+  min-height: 60px;
+  resize: vertical;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.perfil-campo input:focus,
+.perfil-campo select:focus,
+.perfil-campo textarea:focus {
+  border-color: #5148ed;
+  box-shadow: 0 0 0 3px rgba(81, 72, 237, 0.1);
+}
+
+/* ===== SEPARADOR ===== */
+
+.perfil-separador {
+  height: 1px;
+  width: 100%;
+  background: #d3e2ef;
+  margin: 23px 0 26px;
+}
+
+/* ===== HABILIDADES Y TECNOLOGÍAS ===== */
+
+.perfil-grupo-etiquetas {
+  margin-bottom: 25px;
+}
+
+.perfil-grupo-etiquetas h3 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #f9f9f9;
+  margin: 0 0 11px;
+}
+
+.perfil-etiquetas {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.perfil-etiqueta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  max-width: 100%;
+  padding: 6px 10px;
+  background: #99c08d;
+  color: #0b0b0d;
+  border-radius: 5px;
+  font-size: 12px;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+
+.perfil-eliminar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 13px;
+  height: 13px;
+  padding: 0;
+  border: 1.5px solid #0c0759;
+  border-radius: 50%;
+  background: transparent;
+  color: #08036e;
+  font-size: 12px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.perfil-eliminar:hover {
+  background: #0d0d12;
+  color: white;
+}
+
+/* ===== AGREGAR ETIQUETAS ===== */
+
+.perfil-agregar {
+  padding: 5px 10px;
+  border: 1px solid #edf0f2;
+  border-radius: 5px;
+  color: #eeeff0;
+  background: transparent;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.perfil-agregar:hover {
+  background: #fcfdff;
+  color: #08044c;
+  border-color: #020202;
+}
+
+.perfil-nueva-etiqueta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.perfil-nueva-etiqueta input {
+  width: 150px;
+  max-width: 100%;
+  padding: 6px 8px;
+  border: 1px solid #fafbfc;
+  border-radius: 5px;
+  outline: none;
+  background: #ffffff;
+  font-size: 12px;
+}
+
+.perfil-nueva-etiqueta button {
+  padding: 6px 9px;
+  border: none;
+  border-radius: 5px;
+  background: #0e0e10;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.perfil-nueva-etiqueta button:last-child {
+  background: #fefefe;
+  color: #435b76;
+}
+
+/* ===== MENSAJES ===== */
+
+.perfil-mensaje {
+  margin: 10px 0;
+  font-size: 12px;
+  color: #111313;
+}
+
+/* ===== BOTONES ===== */
+
+.perfil-acciones {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.perfil-btn-descartar,
+.perfil-btn-guardar {
+  min-height: 37px;
+  padding: 10px 18px;
+  border-radius: 7px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.perfil-btn-descartar {
+  background: transparent;
+  border: 1px solid #fafafa;
+  color: #fafafa;
+}
+
+.perfil-btn-descartar:hover {
+  background: #580808;
+}
+
+.perfil-btn-guardar {
+  border: 1px solid #0c0c13;
+  background: #fafafa;
+  color: #100a0a;
+}
+
+.perfil-btn-guardar:hover {
+  background: #99c08d;
+  border-color: #99c08d;
+}
+
+.perfil-btn-guardar:active {
+  transform: scale(0.98);
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+  .perfil-encabezado h1 {
+    font-size: 24px;
+  }
+
+  .perfil-formulario {
+    padding: 20px;
+  }
+
+  .perfil-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 420px) {
+  .perfil-formulario {
+    padding: 16px;
+  }
+
+  .perfil-acciones {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  .perfil-btn-descartar,
+  .perfil-btn-guardar {
+    width: 100%;
+  }
+
+  .perfil-etiqueta {
+    font-size: 11px;
+  }
+}
