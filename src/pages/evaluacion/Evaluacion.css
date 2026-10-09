@@ -1,0 +1,252 @@
+
+/* Contenedor principal */
+.evaluacion-pagina {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px 8px 40px;
+  color: #172238;
+}
+
+/* Encabezado */
+.evaluacion-cabecera {
+  margin-bottom: 25px;
+}
+
+.evaluacion-cabecera h1 {
+  font-size: 30px;
+  margin: 10px 0;
+}
+
+.evaluacion-cabecera p {
+  line-height: 1.65;
+  color: #526277;
+  max-width: 770px;
+}
+
+.evaluacion-etiqueta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #06632e;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.evaluacion-contexto {
+  padding: 10px 15px;
+  background: #eaf4f4;
+  border-radius: 8px;
+}
+
+/* Tarjetas */
+.evaluacion-tarjeta {
+  background: #fff;
+  border: 1px solid #dce5ec;
+  border-radius: 14px;
+  padding: clamp(18px, 4vw, 32px);
+  box-shadow: 0 6px 22px #19354a0b;
+}
+
+.evaluacion-tarjeta h2 {
+  font-size: 22px;
+  margin: 0 0 12px;
+}
+
+.evaluacion-tarjeta p {
+  line-height: 1.6;
+  color: #526277;
+}
+
+/* Resumen inicial */
+.evaluacion-resumen {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 24px 0;
+}
+
+.evaluacion-resumen span {
+  border: 1px solid #dbe6ef;
+  background: #f6f9fb;
+  padding: 15px;
+  border-radius: 9px;
+  flex: 1;
+  min-width: 155px;
+}
+
+.evaluacion-resumen strong {
+  display: block;
+  font-size: 25px;
+  color: #056b14;
+}
+
+.evaluacion-nota {
+  font-size: 14px;
+}
+
+/* Botones */
+.evaluacion-boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  background: #056b14;
+  border: 1px solid #056b14;
+  color: #fff;
+  border-radius: 8px;
+  padding: 12px 18px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.evaluacion-boton:hover {
+  background: #045410;
+}
+
+.evaluacion-boton:focus-visible {
+  outline: 3px solid #77b7ff;
+  outline-offset: 2px;
+}
+
+.evaluacion-boton.secundario {
+  color: #17415f;
+  background: #fff;
+  border-color: #b9cad7;
+}
+
+/* Barra de progreso */
+.evaluacion-progreso-texto {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 13px;
+  color: #51677b;
+  margin-bottom: 9px;
+}
+
+.evaluacion-progreso,
+.evaluacion-barra {
+  height: 9px;
+  background: #e7eff4;
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.evaluacion-progreso {
+  margin-bottom: 28px;
+}
+
+.evaluacion-progreso > div,
+.evaluacion-barra > div {
+  height: 100%;
+  background: #058237;
+  transition: width 0.2s;
+}
+
+/* Preguntas y respuestas */
+.evaluacion-opciones {
+  border: 0;
+  padding: 0;
+  margin: 22px 0;
+}
+
+.evaluacion-opciones legend {
+  font-weight: 700;
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+
+.evaluacion-opciones label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid #dce5ec;
+  border-radius: 8px;
+  margin-bottom: 9px;
+  cursor: pointer;
+}
+
+.evaluacion-opciones label.seleccionada {
+  background: #edf9ef;
+  border-color: #0a8734;
+}
+
+.evaluacion-opciones input {
+  accent-color: #056b14;
+}
+
+/* Evidencia */
+.evaluacion-evidencia {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 9px;
+}
+
+.evaluacion-tarjeta textarea {
+  box-sizing: border-box;
+  width: 100%;
+  resize: vertical;
+  border: 1px solid #bbccd8;
+  border-radius: 8px;
+  padding: 12px;
+  font: inherit;
+}
+
+.evaluacion-tarjeta textarea:focus-visible {
+  outline: 2px solid #058237;
+}
+
+/* Navegación */
+.evaluacion-acciones {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.evaluacion-error {
+  color: #b42318 !important;
+  font-weight: 700;
+}
+
+/* Resultados */
+.evaluacion-finalizado {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #056b14;
+  font-weight: 700;
+  margin-bottom: 17px;
+}
+
+.evaluacion-resultados {
+  display: grid;
+  gap: 17px;
+  margin: 25px 0;
+}
+
+.evaluacion-resultado > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.evaluacion-resultado p {
+  font-size: 13px;
+  margin: 5px 0 0;
+}
+
+/* Adaptación para celulares */
+@media (max-width: 600px) {
+  .evaluacion-acciones .evaluacion-boton {
+    padding: 11px;
+  }
+
+  .evaluacion-pagina {
+    padding: 10px 0 25px;
+  }
+}

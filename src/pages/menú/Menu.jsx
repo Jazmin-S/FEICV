@@ -1,16 +1,24 @@
+
 import Catalogo from "../catalogo/Catalogo";
+import DescargaCV from "../cv/DescargaCV";
+import Resultados from "../resultados/Resultados";
+import Evaluacion from "../evaluacion/Evaluacion";
 import Perfil from "../perfilacademico/Perfil";
+
 import { useState } from "react";
+
 import {
   LayoutDashboard,
   UserRound,
   Server,
   Grid2X2,
   ClipboardList,
+  FileText,
   Menu as MenuIcon,
   X,
   GraduationCap,
 } from "lucide-react";
+
 import "./Menu.css";
 
 const opcionesMenu = [
@@ -18,7 +26,7 @@ const opcionesMenu = [
   { id: "perfil", nombre: "Perfil Académico", icono: UserRound },
   { id: "catalogo", nombre: "Catálogo de EE", icono: Server },
   { id: "resultados", nombre: "Resultados de la evaluación", icono: Grid2X2 },
-  { id: "cv", nombre: "Descarga CV", icono: ClipboardList },
+  { id: "cv", nombre: "Descarga CV",  icono: FileText },
 ];
 
 // Información
@@ -245,6 +253,10 @@ function GraficoDiagnosticos() {
 export default function Menu() {
   const [opcionActiva, setOpcionActiva] = useState("inicio");
   const [menuAbierto, setMenuAbierto] = useState(false);
+  
+  const [experienciaEvaluar, setExperienciaEvaluar] =
+  useState(null);
+
 
   const seleccionarOpcion = (id) => {
     setOpcionActiva(id);
@@ -350,20 +362,34 @@ export default function Menu() {
                 <GraficoDiagnosticos />
               </section>
             </>
-                    ) : opcionActiva === "perfil" ? (
-            <Perfil />
-          ) : opcionActiva === "catalogo" ? (
-            <Catalogo />
-          ) : (
-            <section className="menu-vista-secundaria">
-              <GraduationCap size={42} />
-              <h1>
-                {opcionesMenu.find(
-                  (opcion) => opcion.id === opcionActiva
-                )?.nombre}
-              </h1>
-              <p>Seleccionaste esta sección del sistema.</p>
-            </section>
+                              
+            ) : opcionActiva === "perfil" ? (
+              <Perfil />
+            ) : opcionActiva === "catalogo" ? (
+              <Catalogo
+                onEvaluar={(ee) => {
+                  setExperienciaEvaluar(ee);
+                  seleccionarOpcion("evaluacion");
+                }}
+              />
+            ) : opcionActiva === "evaluacion" ? (
+              <Evaluacion experiencia={experienciaEvaluar} />
+            ) : opcionActiva === "resultados" ? (
+              <Resultados
+                onIrEvaluacion={() => seleccionarOpcion("evaluacion")}
+              />
+            ) : opcionActiva === "cv" ? (
+              <DescargaCV />
+            ) : (
+              <section className="menu-vista-secundaria">
+                <GraduationCap size={42} />
+                <h1>
+                  {opcionesMenu.find(
+                    (opcion) => opcion.id === opcionActiva
+                  )?.nombre}
+                </h1>
+                <p>Seleccionaste esta sección del sistema.</p>
+              </section>
           )}
         </main>
       </div>
